@@ -1,0 +1,27 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Webpixels
+@import 'https://unpkg.com/@webpixels/css@1.1.5/dist/index.css';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+// Bootstrap
+@import '~bootstrap-icons';
+
+a, .btn-link {
+    text-decoration: none;
+}
+
+.logo {
+    text-align: center;
+}
+
+.logo img {
+    height: 48px;
+    margin: auto
+}
