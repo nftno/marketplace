@@ -7,7 +7,7 @@
             <div class="card">
                 <div class="card-body">
                     @include('auth.partials.card-header')
-                    <h4 class="text-center mb-4">{{ __('Register') }} در  {{ config('app.name') }}</h4>
+                    <h4 class="text-center mb-4">{{ __('Register') }}  {{ config('app.name') }}</h4>
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
 

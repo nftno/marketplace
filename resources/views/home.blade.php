@@ -25,23 +25,23 @@ function makeMock($count = 10) {
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('home') }}">
-                            <i class="bi bi-house"></i> صفحه اصلی
+                            <i class="bi bi-house"></i>Home
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">
-                            <i class="bi bi-wallet"></i> کیف پول
+                            <i class="bi bi-wallet"></i>Wallet
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">
-                            <i class="bi bi-chat"></i> پشتیبانی
+                            <i class="bi bi-chat"></i>Support
                             <span class="badge bg-soft-primary text-primary rounded-pill d-inline-flex align-iteme-center me-auto">6</span>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">
-                            <i class="bi bi-cart"></i> سفارشات
+                            <i class="bi bi-cart"></i> My NFTs
                         </a>
                     </li>
                 </ul>
@@ -54,13 +54,13 @@ function makeMock($count = 10) {
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link" href="#">
-                            <i class="bi bi-person-square"></i> حساب کاربری
+                            <i class="bi bi-person-square"></i>Profile
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault();
                              document.getElementById('logout-form').submit();">
-                            <i class="bi bi-box-arrow-left"></i> خروج
+                            <i class="bi bi-box-arrow-left"></i> Logout
                         </a>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                             @csrf
@@ -79,7 +79,7 @@ function makeMock($count = 10) {
                     <div class="row align-iteme-center">
                         <div class="col-sm-6 col-12 mb-4 mb-sm-0">
                             <!-- Title -->
-                            <h1 class="h2 mb-0 ls-tight">داشبورد کاربری</h1>
+                            <h1 class="h2 mb-0 ls-tight">Dashboard</h1>
                         </div>
                     </div>
                 </div>
@@ -95,8 +95,8 @@ function makeMock($count = 10) {
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col">
-                                        <span class="h6 font-semibold text-muted text-sm d-block mb-2">موجودی شما</span>
-                                        <span class="h3 font-bold mb-0">0 تومان</span>
+                                        <span class="h6 font-semibold text-muted text-sm d-block mb-2">Balance</span>
+                                        <span class="h3 font-bold mb-0">0 ETH</span>
                                     </div>
                                     <div class="col-auto">
                                         <div class="icon icon-shape bg-tertiary text-white text-lg rounded-circle">
@@ -112,8 +112,8 @@ function makeMock($count = 10) {
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col">
-                                        <span class="h6 font-semibold text-muted text-sm d-block mb-2">آخرین ورود شما</span>
-                                        <span class="h3 font-bold mb-0">3 ساعت گذشته</span>
+                                        <span class="h6 font-semibold text-muted text-sm d-block mb-2">Your Last Login</span>
+                                        <span class="h3 font-bold mb-0">3 hours ago</span>
                                     </div>
                                     <div class="col-auto">
                                         <div class="icon icon-shape bg-info text-white text-lg rounded-circle">
@@ -127,16 +127,16 @@ function makeMock($count = 10) {
                 </div>
                 <div class="card shadow border-0 mb-7">
                     <div class="card-header">
-                        <h5 class="mb-0">آخرین سفارشات شما</h5>
+                        <h5 class="mb-0">My Activities</h5>
                     </div>
                     <div class="table-responsive">
                         <table class="table table-hover table-nowrap">
                             <thead class="thead-light">
                             <tr>
-                                <th scope="col">ارز</th>
-                                <th scope="col">مقدار</th>
-                                <th scope="col">خرید/فروش</th>
-                                <th scope="col">پر شده</th>
+                                <th scope="col">Asset</th>
+                                <th scope="col">Price</th>
+                                <th scope="col">Type</th>
+                                <th scope="col">Transaction</th>
                                 <th></th>
                             </tr>
                             </thead>
@@ -151,11 +151,11 @@ function makeMock($count = 10) {
                                         </td>
                                         <td>
                                         <span class="badge badge-lg badge-dot bg-{{ $mock['type'] == 'buy' ? 'success' : 'danger' }}">
-                                            <span>{{ $mock['type'] == 'buy' ? 'خرید' : 'فروش' }}</span>
+                                            <span>{{ $mock['type'] == 'buy' ? 'Mint' : 'Buy' }}</span>
                                         </span>
                                         </td>
                                         <td>
-                                            {{ $mock['filled'] }}%
+                                            0x.....44
                                         </td>
                                     </tr>
                                 @endforeach
